@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Bootstrap 4 Starter Pack</title>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-dark bg-primary navbar-expand-sm fixed-top">
+            <div class="container">
+                <a href="index.html" class="navbar-brand">Career Vision</a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav ml-auto" >
+                        <li class="nav-item">
+                            <a href="#home" class="nav-link" >Home </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Contact Us</a>
+                        </li>
+                        <button class="btn btn-light" data-toggle="modal" data-target="#signinNav"> Login</button>
+                    </ul>
+                </div>
+            </div>  
+        </nav>
+
+        <!-- MODAL -->
+         
+            <!-- SIGN UP -->
+
+
+            <div class="modal fade" role="dialog" id="signupNav">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-primary">
+                            <h4 class="modal-title text-white">Sign up</h4>
+                            <button class="close" data-dismiss="modal">
+                                <span>&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="user.html"  id="sign-up-form">
+                                <div class="form-group">
+                                    <label for="fname">First Name<sup class="text-danger">*</sup></label>
+                                    <input type="text" class="form-control" id="fname" required placeholder="Enter first name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lname">Last Name<sup class="text-danger">*</sup></label>
+                                    <input type="text" class="form-control" id="lname" required placeholder="Enter last name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Name<sup class="text-danger">*</sup></label>
+                                    <input type="email" class="form-control" id="email" required placeholder="Enter email id">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password<sup class="text-danger">*</sup></label>
+                                    <input type="password" class="form-control" id="password" required placeholder="Enter Password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cpassword">Confirm password<sup class="text-danger">*</sup></label>
+                                    <input type="password" class="form-control" id="cpassword" required placeholder="Confirm password">
+                                </div>
+                                <input type="button" class="btn btn-primary" id="sign-up" value="Sign up">
+                            </form>
+                            <div class="text-center">
+                                <a href="#" data-toggle="modal" data-target="#signinNav" data-dismiss="modal">Account exist? Signin</a>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SIGN IN -->
+
+            <div class="modal fade" role="dialog" id="signinNav">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-primary">
+                            <h4 class="modal-title text-white">Log in</h4>
+                            <button class="close" data-dismiss="modal">
+                                <span>&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="user.html" id="lofinForm">
+                                <div class="form-group">
+                                    <label for="loginMail">Email Name<sup class="text-danger">*</sup></label>
+                                    <input type="email" class="form-control" id="loginMail" required placeholder="Enter email id">
+                                </div>
+                                <div class="form-group">
+                                    <label for="loginPassword">Password<sup class="text-danger">*</sup></label>
+                                    <input type="password" class="form-control" id="loginPassword" required placeholder="Enter Password">
+                                </div>
+                                <input type="button" class="btn btn-primary"  id="login"  value="Sign in">
+                            </form>
+                            <div class="text-center">
+                                <a href="#" data-toggle="modal" data-target="#signupNav" data-dismiss="modal">Signup</a>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>
