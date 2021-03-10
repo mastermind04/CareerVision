@@ -1,0 +1,29 @@
+
+html{
+    
+    scroll-behavior: smooth;
+}
+body{
+    padding-top: 100px;
+}
+
+.bg-theme{
+    background-color: #34b57b;
+}
+.text-theme{
+    color: #34b57b;
+}
+.navLink li{
+    text-align: center;
+}
+.navLink li a{
+    color: white!important;
+    font-size: 20px;
+}
+.modal{
+    background-color: rgba(00, 0,0, 0.9);
+}
+.rel{
+    position: relative;
+    top: 100px;
+}

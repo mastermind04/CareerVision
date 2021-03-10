@@ -3,82 +3,128 @@
     <head>
         <meta http-equiv="x-ua-compatible" content="ie=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/bootstrap.css">
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
         <link rel="stylesheet" href="css/style.css">
-        <title>Bootstrap 4 Starter Pack</title>
+        <script src="js/index.js"></script>
+        <title>Careervision</title>
     </head>
 
-    <body>
-        <nav class="navbar navbar-dark bg-primary navbar-expand-sm fixed-top">
+    <body class="bg-light" id="home">
+        <nav class="navbar navbar-dark bg-theme navbar-expand-sm  fixed-top">
             <div class="container">
-                <a href="index.html" class="navbar-brand">Career Vision</a>
+
+                <a href="index.html" class="navbar-brand">
+                  <img src="img/logo3.png" alt="Career Vision" class="">
+                </a>
                 <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 
                 <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav ml-auto" >
+                    <ul class="navbar-nav ml-auto navLink" >
                         <li class="nav-item">
                             <a href="#home" class="nav-link" >Home </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">About Us</a>
+                            <a href="#about" class="nav-link">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Contact Us</a>
+                            <a href="#contactUs" class="nav-link">Contact Us</a>
                         </li>
-                        <button class="btn btn-light" data-toggle="modal" data-target="#signinNav"> Login</button>
+                        <button class="btn btn-light px-4 mx-3" data-toggle="modal" data-target="#signinNav"> Login</button>
                     </ul>
                 </div>
+
             </div>  
         </nav>
 
         <!-- MODAL -->
-         
             <!-- SIGN UP -->
-
-
             <div class="modal fade" role="dialog" id="signupNav">
-                <div class="modal-dialog">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                     <div class="modal-content">
-                        <div class="modal-header bg-primary">
+
+                        <div class="modal-header bg-theme">
                             <h4 class="modal-title text-white">Sign up</h4>
                             <button class="close" data-dismiss="modal">
                                 <span>&times;</span>
                             </button>
                         </div>
+
                         <div class="modal-body">
                             <form action="user.html"  id="sign-up-form">
-                                <div class="form-group">
-                                    <label for="fname">First Name<sup class="text-danger">*</sup></label>
-                                    <input type="text" class="form-control" id="fname" required placeholder="Enter first name">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="fname">First Name<sup class="text-danger">*</sup></label>
+                                            <input type="text" class="form-control" id="fname" name="signUpFirstName" required placeholder="Enter first name">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="lname">Last Name<sup class="text-danger">*</sup></label>
+                                            <input type="text" class="form-control" id="lname" name="signUpLastName"  required placeholder="Enter last name">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="city">City<sup class="text-danger">*</sup></label>
+                                        <select class="custom-select" id="city" name="city">
+                                            <option value="Ahmedabad">Ahmedabad</option>
+                                            <option value="Surat">Surat</option>
+                                            <option value="Rajkot">Rajkot</option>
+                                            <option value="Gandhinagar">Gandhinagar</option>
+                                            <option value="Vadodara">Vadodara</option>
+                                            <option value="Anand">Anand</option>
+                                            <option value="Jamnagar">Jamnagar</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="birthDate">Date of Birth<sup class="text-danger">*</sup></label>
+                                            <input type="text" class="form-control" id="birthDate" name="dateOfBirth" required placeholder="Enter Date Of birth">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label for="email">Email<sup class="text-danger">*</sup></label>
+                                            <input type="email" class="form-control" id="email" name="signUpEmail" required placeholder="Enter email id">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="password">Password<sup class="text-danger">*</sup></label>
+                                            <input type="password" class="form-control" id="password" name="Password" required placeholder="Enter Password">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="cpassword">Confirm password<sup class="text-danger">*</sup></label>
+                                            <input type="password" class="form-control" id="cpassword" name="confirmPassword" required placeholder="Confirm password">
+                                        </div>
+                                    </div>
+                                    <div class="text-center col-12">
+                                        <input type="button" class="btn btn-info" id="sign-up" value="Sign up">
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="lname">Last Name<sup class="text-danger">*</sup></label>
-                                    <input type="text" class="form-control" id="lname" required placeholder="Enter last name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email Name<sup class="text-danger">*</sup></label>
-                                    <input type="email" class="form-control" id="email" required placeholder="Enter email id">
-                                </div>
-                                <div class="form-group">
-                                    <label for="password">Password<sup class="text-danger">*</sup></label>
-                                    <input type="password" class="form-control" id="password" required placeholder="Enter Password">
-                                </div>
-                                <div class="form-group">
-                                    <label for="cpassword">Confirm password<sup class="text-danger">*</sup></label>
-                                    <input type="password" class="form-control" id="cpassword" required placeholder="Confirm password">
-                                </div>
-                                <input type="button" class="btn btn-primary" id="sign-up" value="Sign up">
                             </form>
-                            <div class="text-center">
-                                <a href="#" data-toggle="modal" data-target="#signinNav" data-dismiss="modal">Account exist? Signin</a>
+                            <div class="text-center p-2">
+                                <a href="#" data-toggle="modal" data-target="#signinNav" data-dismiss="modal">Account exist? Sign in</a>
                             </div>
                         </div>
+
                         <div class="modal-footer">
-                            <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button class="btn btn-danger" data-dismiss="modal">Close</button>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -86,9 +132,9 @@
             <!-- SIGN IN -->
 
             <div class="modal fade" role="dialog" id="signinNav">
-                <div class="modal-dialog">
+                <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
-                        <div class="modal-header bg-primary">
+                        <div class="modal-header bg-theme">
                             <h4 class="modal-title text-white">Log in</h4>
                             <button class="close" data-dismiss="modal">
                                 <span>&times;</span>
@@ -97,27 +143,177 @@
                         <div class="modal-body">
                             <form action="user.html" id="lofinForm">
                                 <div class="form-group">
-                                    <label for="loginMail">Email Name<sup class="text-danger">*</sup></label>
-                                    <input type="email" class="form-control" id="loginMail" required placeholder="Enter email id">
+                                    <label for="loginMail">Email <sup class="text-danger">*</sup></label>
+                                    <input type="email" class="form-control" id="loginMail" name="loginEmail" required placeholder="Enter email id">
                                 </div>
                                 <div class="form-group">
                                     <label for="loginPassword">Password<sup class="text-danger">*</sup></label>
-                                    <input type="password" class="form-control" id="loginPassword" required placeholder="Enter Password">
+                                    <input type="password" class="form-control" id="loginPassword" name="loginPassword" required placeholder="Enter Password">
                                 </div>
-                                <input type="button" class="btn btn-primary"  id="login"  value="Sign in">
+                                <div class="text-center">
+                                    <input type="button" class="btn btn-info"  id="login" name="loginBtn"  value="Log in">
+                                </div>
                             </form>
-                            <div class="text-center">
-                                <a href="#" data-toggle="modal" data-target="#signupNav" data-dismiss="modal">Signup</a>
+                            <div class="text-center p-3">
+                                <a href="#" data-toggle="modal" data-target="#signupNav" data-dismiss="modal">Dont't have an account? Signup</a>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button class="btn btn-danger" data-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
             </div>
-        <script src="js/jquery.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+            <!-------------- LOGIN MODAL END --------------------->
+
+        <!-- ------CAROUSEL SLIDER -------------->
+        
+        <div class="container-fluid " id="homeSlider">
+            <div class="carousel slide" data-interval="2000" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/img-01.jpg" class="img-fluid w-100" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/img-02.jpg" class="img-fluid w-100" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/img-03.jpg" class="img-fluid w-100" alt="">
+                    </div>
+                </div>
+            </div>  
+        </div>
+
+        <!--------CAROUSEL SLIDER END-------------->
+
+        <!---------------About us start----------------->
+        
+        <div class="container bg-white py-3 mt-5" id="about">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="display-3 ">About Us</h2>
+                </div>
+                <div class="col-12">
+                    <div class="text-center">
+                        <ul class="nav nav-tabs" >
+                            <li class="nav-item">
+                                <a href="#history" data-toggle="tab" class="nav-link active">History</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#mission" data-toggle="tab" class="nav-link">Mission and vision</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#md" data-toggle="tab" class="nav-link ">MD and CEO</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="history" class="container p-2 tab-pane active">
+                                <h2 class="display-4">History</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam qui esse pariatur sed quasi fugit magni in facere voluptas sit doloribus illum distinctio, neque perspiciatis nostrum nisi? Harum debitis et optio corrupti officia, architecto dicta soluta delectus iure quaerat fuga reiciendis reprehenderit ea hic nostrum veritatis blanditiis alias nam voluptatibus unde? Ullam earum fuga deleniti architecto asperiores itaque culpa, cupiditate distinctio quae ad repellendus facere minus ratione blanditiis optio nisi, labore porro! Cupiditate assumenda, repudiandae, corrupti provident fugiat quam deleniti vero harum nesciunt, architecto ipsum eum! Maiores eum nihil porro illum pariatur cupiditate, saepe tenetur voluptatibus quo itaque ratione. Perferendis hic tempora voluptates sunt tenetur repudiandae veritatis blanditiis totam aliquid libero, nostrum, distinctio nobis, enim esse possimus ad aut. Id sit incidunt quisquam, reiciendis ullam dolorem obcaecati officia, quaerat optio sequi vitae adipisci odio magni libero quae, reprehenderit nihil in dolores temporibus aliquid blanditiis maiores expedita molestiae eos. Ducimus ipsum, nobis nihil fugiat voluptas iure aut tempore dolores at, quidem commodi similique nisi repellat! Ipsum quis nulla neque ut ullam aspernatur enim, labore non necessitatibus voluptatum sint fugiat iusto consequatur error. Aspernatur, nostrum placeat, dicta modi ab aliquid magnam ea eos, corrupti eum odio esse. Excepturi minima explicabo ratione impedit!</p>
+                            </div>
+                            <div id="mission" class="container p-2 tab-pane fade">
+                                <h2 class="display-4">Mission</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium minus tempore esse, consequatur placeat labore reprehenderit sed unde reiciendis natus enim a modi? Sunt voluptatum cumque perferendis, sit, pariatur illo architecto, minus eligendi amet quos fugiat reprehenderit beatae facere! Sunt perspiciatis, quis quae ex ullam suscipit, assumenda veritatis eum quia dolorum magni nulla pariatur nam praesentium iusto sint dignissimos est.</p>
+                                <h2 class="display-4">Vision</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit inventore tempore ipsam corrupti ut voluptatibus molestias iste, nihil consequatur quia in ullam! Laudantium hic amet nihil modi sed velit praesentium tempora ipsa inventore pariatur! Maxime placeat voluptates facere nobis esse ab, velit eius incidunt. Laudantium provident sint amet incidunt molestiae delectus excepturi obcaecati quis totam. Saepe non nostrum ducimus eaque veritatis doloremque dicta ipsum nihil necessitatibus commodi quas in labore, ex atque assumenda. Repellendus voluptate dolores vero? Autem, blanditiis quisquam.</p>
+                            </div>
+
+                            <div id="md" class="container p-2 tab-pane fade ">
+                                <div class="row justify-content-around">
+                                    <div class="col-9 col-md-4">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <img src="img/md.jpg" class="img-fluid" alt="MD">
+                                            </div>
+                                            <div class="card-footer">
+                                                <h2 class="text-theme">Managing Director</h2>
+                                                <h3>Mr. Jhonathan Queen</h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, totam!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-9 col-md-4">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <img src="img/ceo.jpg" class="img-fluid" alt="MD">
+                                            </div>
+                                            <div class="card-footer">
+                                                <h2 class="text-theme">CEO</h2>
+                                                <h3>Mr. Jhon Doe</h3>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis voluptate architecto iure ipsa ass</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!---------------About us End----------------->
+
+        <div class="container py-5">
+            <div class="text-center mb-4">
+                <h5 class="display-4">Student Testimonials</h5>
+            </div>
+            <div class="row text-center justify-content-around">
+                <div class="col-12 border col-md-3 p-2">
+                    <img src="img/ceo.jpg" class="img-fluid rounded-circle m-2" width="100px" height="100px" alt="">
+                    <p class="lead">
+                        Career Guidance made course choice simple and easy, I am happy I could make it to IIM - Indore
+                    </p>
+                    <h5>Gaurav Agarval</h5>
+                    <p class="text-muted">IIM INdore</p>
+                </div>
+                <div class="col-12 border col-md-3 p-2">
+                    <img src="img/ceo.jpg" class="img-fluid rounded-circle m-2" width="100px" height="100px" alt="">
+                    <p class="lead">
+                        Career Guidance made course choice simple and easy, I am happy I could make it to IIM - Indore
+                    </p>
+                    <h5>Gaurav Agarval</h5>
+                    <p class="text-muted">IIM INdore</p>
+                </div>
+                <div class="col-12 border col-md-3 p-2">
+                    <img src="img/ceo.jpg" class="img-fluid rounded-circle m-2" width="100px" height="100px" alt="">
+                    <p class="lead">
+                        Career Guidance made course choice simple and easy, I am happy I could make it to IIM - Indore
+                    </p>
+                    <h5>Gaurav Agarval</h5>
+                    <p class="text-muted">IIM INdore</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- -----------------CONTACT US START----------- --->
+
+        <div class="container-fluid bg-dark text-white" id="contactUs">
+            <div class="container p-3">
+                <div class="row">
+                    
+                    <div class="col-12 col-md-4 m-4 p-2">
+                        <h3>Address</h3>
+                        121, Clear Water Bay Road<br>
+                          Clear Water Bay, New york<br>
+                          United State<br>
+                          <i class="fa fa-phone"></i> Contact no : +1234567893<br>
+                          <i class="fa fa-envelope"></i> Email id : <a href="#" class="">admin@careervision.com</a><br><br>
+                          <div>
+                             <a href="#" class="btn badge-danger p-1"><i class="fa m-1 fa-instagram"></i></a>
+                             <a href="#" class="btn badge-primary p-1"><i class="fa m-1 fa-linkedin"></i></a>
+                             <a href="#" class="btn badge-danger p-1"><i class="fa m-1 fa-youtube"></i></a>
+                             <a href="#" class="btn badge-info p-1"><i class="fa m-1 fa-twitter"></i></a>
+                          </div>
+                    </div>
+                    <div class="col-12 text-center p-3">
+                        <p class="lead">&copy; Copyright 2018 Career Vision</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <!-- -----------------CONTACT US END----------- ---> 
     </body>
 </html>
