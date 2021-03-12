@@ -4,9 +4,11 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    padding-top: 100px;
+    padding-top: 96px;
 }
-
+.wid{
+    height: 200px;
+}
 .bg-theme{
     background-color: #34b57b;
 }
@@ -26,4 +28,7 @@ body{
 .rel{
     position: relative;
     top: 100px;
+}
+.user-logo{
+    font-size: 40px;
 }
