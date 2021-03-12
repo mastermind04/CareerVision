@@ -4,7 +4,7 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    padding-top: 96px;
+    padding-top: 94px;
 }
 .wid{
     height: 200px;
@@ -30,5 +30,19 @@ body{
     top: 100px;
 }
 .user-logo{
-    font-size: 40px;
+    font-size: 30px;
+}
+.take-it-up{
+    margin-top: -80px;
+}
+.take-center{
+    vertical-align: center;
+}
+
+.userPage  .modal-dialog{
+    max-width: 60%;
+}
+
+.userPage  .modal-dialog .fa{
+    font-size: 30px;
 }
