@@ -38,11 +38,9 @@ body{
 .take-center{
     vertical-align: center;
 }
-
-.userPage  .modal-dialog{
+.imgModal{
     max-width: 60%;
 }
-
-.userPage  .modal-dialog .fa{
-    font-size: 30px;
+.imgModal .fa{
+    font-size: 50px;
 }
